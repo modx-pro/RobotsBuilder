@@ -1,0 +1,9 @@
+Changelog for RobotsBuilder.
+
+1.0.1-beta
+==============
+- Multicontext managing
+
+1.0.0-beta
+==============
+- First release
