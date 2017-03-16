@@ -1,10 +1,10 @@
 --------------------
 RobotsBuilder
 --------------------
-Author: John Doe <john@doe.com>
+Author: Ilya Utkin <ilyautkin@mail.ru>
 --------------------
 
-A basic Extra for MODx Revolution.
+MODX Extra for manage robots.txt
 
 Feel free to suggest ideas/improvements/bugs on GitHub:
-http://github.com/username/RobotsBuilder/issues
+https://github.com/ilyautkin/RobotsBuilder/issues
