@@ -6,12 +6,21 @@ $xpdo_meta_map['RobotsBuilderItem']= array (
   'extends' => 'xPDOSimpleObject',
   'fields' => 
   array (
+    'type' => 'robots.txt',
     'context' => 'web',
     'content' => '',
     'active' => 1,
   ),
   'fieldMeta' => 
   array (
+    'type' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '100',
+      'phptype' => 'string',
+      'null' => false,
+      'default' => 'robots.txt',
+    ),
     'context' => 
     array (
       'dbtype' => 'varchar',
@@ -38,22 +47,6 @@ $xpdo_meta_map['RobotsBuilderItem']= array (
   ),
   'indexes' => 
   array (
-    'context' => 
-    array (
-      'alias' => 'context',
-      'primary' => false,
-      'unique' => true,
-      'type' => 'BTREE',
-      'columns' => 
-      array (
-        'context' => 
-        array (
-          'length' => '',
-          'collation' => 'A',
-          'null' => false,
-        ),
-      ),
-    ),
     'active' => 
     array (
       'alias' => 'active',

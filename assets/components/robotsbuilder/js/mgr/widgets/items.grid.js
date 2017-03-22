@@ -182,7 +182,7 @@ Ext.extend(RobotsBuilder.grid.Items, MODx.grid.Grid, {
     },
 
     getFields: function () {
-        return ['id', 'context', 'content', 'active', 'actions'];
+        return ['id', 'type', 'context', 'content', 'active', 'actions'];
     },
 
     getColumns: function () {
@@ -191,6 +191,11 @@ Ext.extend(RobotsBuilder.grid.Items, MODx.grid.Grid, {
             dataIndex: 'id',
             sortable: true,
             width: 70
+        }, {
+            header: _('robotsbuilder_item_type'),
+            dataIndex: 'type',
+            sortable: true,
+            width: 200,
         }, {
             header: _('robotsbuilder_item_name'),
             dataIndex: 'context',

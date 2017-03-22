@@ -1,5 +1,9 @@
 Changelog for RobotsBuilder.
 
+1.0.3-beta
+==============
+- Added creating sitemap.xml
+
 1.0.2-beta
 ==============
 - Fix description in RU lexicon

@@ -22,6 +22,13 @@ Ext.extend(RobotsBuilder.window.CreateItem, MODx.Window, {
 
     getFields: function (config) {
         return [{
+            xtype: 'robotsbuilder-combo-type',
+            fieldLabel: _('robotsbuilder_item_type'),
+            name: 'type',
+            id: config.id + '-type',
+            anchor: '99%',
+            allowBlank: false,
+        }, {
             xtype: 'modx-combo-context',
             fieldLabel: _('robotsbuilder_item_name'),
             name: 'context',
@@ -79,6 +86,13 @@ Ext.extend(RobotsBuilder.window.UpdateItem, MODx.Window, {
             name: 'id',
             id: config.id + '-id',
         }, {
+            xtype: 'robotsbuilder-combo-type',
+            fieldLabel: _('robotsbuilder_item_type'),
+            name: 'type',
+            id: config.id + '-type',
+            anchor: '99%',
+            allowBlank: false,
+        }, {
             xtype: 'modx-combo-context',
             fieldLabel: _('robotsbuilder_item_name'),
             name: 'context',
@@ -105,3 +119,28 @@ Ext.extend(RobotsBuilder.window.UpdateItem, MODx.Window, {
 
 });
 Ext.reg('robotsbuilder-item-window-update', RobotsBuilder.window.UpdateItem);
+
+var storeitems = new Ext.data.ArrayStore({
+    id: 'type-items'
+    ,fields: ['value',{name: 'type', type: 'string'}]
+    ,data: [['robots.txt','robots.txt'],['sitemap.xml','sitemap.xml']]
+});
+RobotsBuilder.combo.type = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        store: storeitems
+        ,displayField: 'type'
+        ,valueField: 'value'
+        ,hiddenName: 'type'
+        ,mode: 'local'
+        ,triggerAction: 'all'
+        ,editable: false
+        ,selectOnFocus: false
+        ,preventRender: true
+        ,forceSelection: true
+        ,enableKeyEvents: true
+    });
+    RobotsBuilder.combo.type.superclass.constructor.call(this,config);
+};
+Ext.extend(RobotsBuilder.combo.type,MODx.combo.ComboBox);
+Ext.reg('robotsbuilder-combo-type',RobotsBuilder.combo.type);
