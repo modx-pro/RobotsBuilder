@@ -2,7 +2,7 @@
 include_once 'setting.inc.php';
 
 $_lang['robotsbuilder'] = 'RobotsBuilder';
-$_lang['robotsbuilder_menu_desc'] = 'Пример расширения для разработки.';
+$_lang['robotsbuilder_menu_desc'] = 'Управление файлами robots.txt';
 $_lang['robotsbuilder_intro_msg'] = 'Вы можете выделять сразу несколько строк при помощи Shift или Ctrl.';
 
 $_lang['robotsbuilder_items'] = 'Robots';
