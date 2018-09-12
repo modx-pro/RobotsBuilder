@@ -32,7 +32,7 @@ $xpdo_meta_map['RobotsBuilderItem']= array (
     'content' => 
     array (
       'dbtype' => 'text',
-      'phptype' => 'text',
+      'phptype' => 'string',
       'null' => true,
       'default' => '',
     ),
