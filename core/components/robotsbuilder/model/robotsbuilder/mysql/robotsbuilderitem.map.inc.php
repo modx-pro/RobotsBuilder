@@ -4,6 +4,10 @@ $xpdo_meta_map['RobotsBuilderItem']= array (
   'version' => '1.1',
   'table' => 'robotsbuilder_items',
   'extends' => 'xPDOSimpleObject',
+  'tableMeta' => 
+  array (
+    'engine' => 'MyISAM',
+  ),
   'fields' => 
   array (
     'type' => 'robots.txt',
@@ -32,7 +36,7 @@ $xpdo_meta_map['RobotsBuilderItem']= array (
     'content' => 
     array (
       'dbtype' => 'text',
-      'phptype' => 'text',
+      'phptype' => 'string',
       'null' => true,
       'default' => '',
     ),

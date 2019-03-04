@@ -11,10 +11,10 @@ switch ($modx->event->name) {
                 $modelPath = $modx->getOption('robotsbuilder_core_path',null,$modx->getOption('core_path').'components/robotsbuilder/').'model/';
                 $modx->addPackage('robotsbuilder', $modelPath);
                 if ($robots = $modx->getObject('RobotsBuilderItem', array('context' => $modx->context->key, 'type' => $uri, 'active' => true))) {
-                    if ($chunk = $modx->newObject('modChunk', array('snippet' => $robots->get('content')))){
-                        $chunk->setCacheable(false);
-                        $output = $chunk->process();
-                    }
+                    $output = $robots->get('content');
+                    $maxIterations= (integer) $modx->getOption('parser_max_iterations', null, 10);
+                    $modx->getParser()->processElementTags('', $output, false, false, '[[', ']]', [], $maxIterations);
+                    $modx->getParser()->processElementTags('', $output, true, true, '[[', ']]', [], $maxIterations);
                 }
                 break;
             default:
